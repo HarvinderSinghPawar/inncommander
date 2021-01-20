@@ -23,25 +23,36 @@
 </head>
 
 <body>
-    <!-- Vertical Varition in Group Button -->
-    <!--<span class="caret" style="margin-left: 45px; margin-right: 90px;"></span>-->
-    ​<div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" id="hide" onclick="closeNav()">×</a>
-        <img src="Marketo assets/logo.png" class="img-fluid" style="padding: 20px;" alt="SidebarLogo">
+
+
+    <!--------------------------------------------   Sidebar     ---------------------------------------------------->
+
+    ​ <div id="mySidebar" class="sidebar">
+        <!-- Container for Sidebar -->
+        <!--Arrow Button-->
+        <div id="openhere">
+            <button class="btn openbtn float-right" onclick="openNav()"><img src="Marketo assets\Side panel Icons\icon\Arrow.png"
+                    style="height: 4rem; width: 4rem; background-color: transparent; position: fixed;">
+            </button>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        </div>
+        
+        <img src="Marketo assets/logo.png" class="img-fluid img-responsive" style="padding: 20px;" alt="SidebarLogo">
 
         <div class="btn-group-vertical btn-block">
-    
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default text-white dropdown-toggle" data-toggle="dropdown"><img
-                            src="Marketo assets\Side panel Icons\icon\user.png"
-                            style="height: 20px; width: 20px; margin:-6px 10px 0px -90px;">
-                        <span style="font-size: 17px; margin-right: 20px;"> Overview</span>
-                    </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">111111</a>
-                        <a class="dropdown-item" href="#">222222</a>
-                    </div>
+            <!--Inside div in Sidebar Container-->
+
+            <div class="btn-group text-center">
+                <button type="button" class="btn btn-default text-white dropdown-toggle" data-toggle="dropdown"><img
+                        src="Marketo assets\Side panel Icons\icon\user.png"
+                        style="height: 20px; width: 20px; margin:-6px 10px 0px -90px;">
+                    <span style="font-size: 17px;">Overview</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">111111</a>
+                    <a class="dropdown-item" href="#">222222</a>
                 </div>
+            </div>
 
             <div class="btn-group">
                 <button type="button" class="btn btn-default text-white dropdown-toggle" data-toggle="dropdown"><img
@@ -105,9 +116,8 @@
 
 
 
-
-
-            <hr>
+            <hr style="width:50%;text-align:center;margin-left: auto">
+            <!-- Putting a Horizotal Line between the Buttons inside the Sidebar -->
 
 
             <button type="button" class="btn btn-default text-white"><img
@@ -132,65 +142,102 @@
         </div>
     </div>
 
-    <div id="main">
-        <p class="h1" style=" color: darkblue; margin-left: 65px; margin-top: 0px;">Department Name-Employee List</p>
-        <span class="btn-group" style="background-color: transparent; height: 5rem; margin: -60px 8px 0px 1050px;">
-            <button type="button" class="btn btn-default"><img src="Marketo assets\Side panel Icons\icon\search.png"
-                    class="img-fluid" style="height: 2rem; width: 2rem;" alt="Search Button"></button>
-            <button type="button" class="btn btn-default"><img src="Marketo assets\Side panel Icons\icon\bell.png"
-                    class="img-fluid" style="height: 2rem; width: 2rem;" alt="Notification Bell"></button>
-            <button type="button" class="btn btn-default" style="width: 19rem;"><img
-                    src="Marketo assets\Side panel Icons\icon\Oval.png" class="img-fluid"
-                    style="height: 4rem; width: 4rem; padding: 0; margin: 0; vertical-align: middle; " alt="Account">
-                <span style="color: darkblue; font-size: 12px; text-align: left; padding-left: 0px; margin-left: 0px;">
-                    Vincent
-                    Strickland
-                </span></button>
-            <button type="button" class="btn btn-default"><img src="Marketo assets\Side panel Icons\icon\log-out.png"
-                    class="img-fluid" style="height: 2rem; width: 2rem;" alt="Logout"></button>
-        </span>
-        <button class="openbtn" onclick="openNav()" id="show"><img src="Marketo assets\Side panel Icons\icon\Arrow.png"
-                style="height: 4rem; width: 4rem; background-color: transparent;"></button>
-        <div class="btn-group">
-            <button type="button" class="btn btn-outline-dark active" style="
-                margin-left: 30px; font-size: 20px; background-color: darkblue; color: white;">Properties</button>
-            <div class="btn-group">
-                <!--    <select class=" btn btn-outline-dark form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="
-                margin-left: 0px; font-size: 20px;">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>    -->
-                <button type="button" class="btn btn-outline-dark  dropdown-toggle" data-toggle="dropdown">
-                    selected two properties
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Tablet</a>
-                    <a class="dropdown-item" href="#">Smartphone</a>
-                </div>
+
+
+
+    <!---------------------------------------    Main Panal     ------------------------------------------>
+
+    <!-- Main Container -->
+    <div class="container-fluid " id="main">
+        <div>
+            <div>
+                <p class="h1 text-justify float-left" style=" margin-left: 60px; margin-top: 40px; font-size: 40px;">
+                    Department
+                    Name-Employee List</p>
+                <!--Group Buttons at top right corner-->
+                <span class="btn-group float-right mt-5"
+                    style="background-color: transparent; height: 5rem; margin-top: 0px; margin-left: auto; margin-right: 0px;">
+                    <!--Serch iCon-->
+                    <button type="button" class="btn btn-default"><img
+                            src="Marketo assets\Side panel Icons\icon\search.png" class="img-fluid"
+                            style="height: 2rem; width: 2rem;" alt="Search Button"></button>
+                    <!--Notification Bell-->
+                    <button type="button" class="btn btn-default"><img
+                            src="Marketo assets\Side panel Icons\icon\bell.png" class="img-fluid"
+                            style="height: 2rem; width: 2rem;" alt="Notification Bell"></button>
+                    <!--Person Account-->
+                    <button type="button" class="btn btn-default" style="width: 19rem;"><img
+                            src="Marketo assets\Side panel Icons\icon\Oval.png" class="img-fluid"
+                            style="height: 4rem; width: 4rem; padding: 0; margin: 0; vertical-align: middle; "
+                            alt="Account">
+                        <span
+                            style="color: darkblue; font-size: 12px; text-align: left; padding-left: 0px; margin-left: 0px;">
+                            Vincent
+                            Strickland
+                        </span></button>
+                    <!--Logut Button-->
+                    <button type="button" class="btn btn-default"><img
+                            src="Marketo assets\Side panel Icons\icon\log-out.png" class="img-fluid"
+                            style="height: 2rem; width: 2rem;" alt="Logout"></button>
+                </span>
+            </div>
+            <div style="clear: both;"></div>
+            <!--Left Group Buttons in Header-->
+            <div class="btn-group container" style="width: 400px; margin-left: 50px;">
+
+                <!--Properties Header Buttons-->
+                <button type="button" class="btn active rounded" style="
+                 font-size: 10px; background-color: darkblue; color: white;">Properties</button>
+                <span class="btn-group">
+                    <button class="btn btn-outline-dark dropdown-toggle rounded" type="button" style="font-size: 10px;"
+                        data-toggle="dropdown">
+                        Selected two properties
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Select 1</a>
+                        <a class="dropdown-item" href="#">Select 2</a>
+                        <a class="dropdown-item" href="#">Select 3</a>
+                        <a class="dropdown-item" href="#">Select 4</a>
+                    </div>
+                </span>
+                <span class="ml-mr-auto">
+                    <button type="button" class="btn-lg btn-close" data-dismiss="modal" style="background-color:#d3d3d3"
+                        ; aria-label="Close">Select
+                        1<span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="btn-lg btn-close" data-dismiss="modal" style="background-color:#d3d3d3"
+                        ; aria-label="Close">Select
+                        4<span aria-hidden="true">&times;</span></button>
+                </span>
+
             </div>
         </div>
+        <div style="clear: both;"></div>
+        <!-------------------------------  Internal Panal of Main Window  ---------------------------------->
 
-        <div class="container-fluid" style=" margin: 30px 30px 30px 10px;">
-
-            <div class="search-container">
+        <div class="container-fluid table-responsive-md h-100 w-75 shadow p-6 mb-10 bg-white rounded"
+            style="margin: 30px 80px 40px 40px; background-color:white;">
+            <!----Searbar---->
+            <span class="search-container border border-secondary rounded m-5">
                 <form action="/action_page.php">
                     <input type="text" placeholder="Search.." name="search">
                     <button type="button" class="btn btn-default"><img
                             src="Marketo assets\Side panel Icons\icon\search.png" class="img-fluid"
                             style="height: 2rem; width: 2rem;" alt="Search Button"></button>
                 </form>
-            </div>
+            </span>
 
-            <div class="text-right" style="margin-bottom: 15px;">
-                <button type="button" class="btn btn-primary" style="background-color: darkblue;">Schedule</button>
-                <button type="button" class="btn btn-primary" style="background-color: darkblue;">+Add
+            <!--- Table top right corner button -->
+            <span class="float-right m-5">
+                <button type="button" class="btn btn-default btn-lg m-1"
+                    style="background-color: darkblue; color: white;">Schedule</button>
+
+                <button type="button" class="btn btn-default btn-lg m-1"
+                    style="background-color: darkblue;color: white;">+Add
                     New</button>
-            </div>
+            </span>
 
 
-
+            <!----- Adding Table Here------>
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -207,7 +254,7 @@
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>Mark</td>
+                        <td>Mark Vincent otto</td>
                         <td>Otto</td>
                         <td>@mdo</td>
                         <td>Mark</td>
@@ -245,28 +292,30 @@
                         <td>@fat</td>
                         <td>Mark</td>
                         <td>Otto</td>
-                        <td><div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck">Sun</label>
-                        </div></td>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck">Sun</label>
+                            </div>
+                        </td>
                         <td>@ashd</td>
                     </tr>
                     <tr>
@@ -275,28 +324,30 @@
                         <td>@twitter</td>
                         <td>Mark</td>
                         <td>Otto</td>
-                        <td><div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck">Sun</label>
-                        </div></td>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck">Sun</label>
+                            </div>
+                        </td>
                         <td>@mdo</td>
                     </tr>
                     <tr>
@@ -306,28 +357,30 @@
                         <td>@fat</td>
                         <td>Mark</td>
                         <td>Otto</td>
-                        <td><div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck">Sun</label>
-                        </div></td>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck">Sun</label>
+                            </div>
+                        </td>
                         <td>@mdo</td>
                     </tr>
                     <tr>
@@ -337,28 +390,30 @@
                         <td>@fat</td>
                         <td>Mark</td>
                         <td>Otto</td>
-                        <td><div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck">Sun</label>
-                        </div></td>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck">Sun</label>
+                            </div>
+                        </td>
                         <td>@mdo</td>
                     </tr>
                     <tr>
@@ -368,28 +423,30 @@
                         <td>@fat</td>
                         <td>Mark</td>
                         <td>Otto</td>
-                        <td><div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck">Sun</label>
-                        </div></td>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck">Sun</label>
+                            </div>
+                        </td>
                         <td>@mdo</td>
                     </tr>
                     <tr>
@@ -399,28 +456,30 @@
                         <td>@fat</td>
                         <td>Mark</td>
                         <td>Otto</td>
-                        <td><div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck">Sun</label>
-                        </div></td>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck">Sun</label>
+                            </div>
+                        </td>
                         <td>@mdo</td>
                     </tr>
                     <tr>
@@ -430,28 +489,30 @@
                         <td>@fat</td>
                         <td>Mark</td>
                         <td>Otto</td>
-                        <td><div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck">Sun</label>
-                        </div></td>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck">Sun</label>
+                            </div>
+                        </td>
                         <td>@mdo</td>
                     </tr>
                     <tr>
@@ -461,28 +522,30 @@
                         <td>@fat</td>
                         <td>Mark</td>
                         <td>Otto</td>
-                        <td><div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck">Sun</label>
-                        </div></td>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck">Sun</label>
+                            </div>
+                        </td>
                         <td>@mdo</td>
                     </tr>
                     <tr>
@@ -492,34 +555,39 @@
                         <td>@fat</td>
                         <td>Mark</td>
                         <td>Otto</td>
-                        <td><div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck1">Mon</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck2">Tue</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck3">Wed</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
+                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck4">Thu</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
+                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck5">Fri</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck6">Sat</label>
 
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btncheck">Sun</label>
-                        </div></td>
+                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btncheck">Sun</label>
+                            </div>
+                        </td>
                         <td>@mdo</td>
                     </tr>
                 </tbody>
             </table>
 
 
+
+
+            <!--Pagination bottom left Corner-->
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
                     <li class="page-item">
@@ -535,6 +603,7 @@
                     </li>
                 </ul>
             </nav>
+        </div>
 </body>
 
 </html>
