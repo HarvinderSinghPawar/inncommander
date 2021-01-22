@@ -74,7 +74,8 @@ color: white;
 }
 
 .nav__downArrow{
- margin-left: 100px;
+ margin-left: 150px;
+vertical-align: super;
 }
 
 .nav__iconImg:hover{
@@ -82,6 +83,11 @@ color: white;
 
 }
 
+#settings{
+position: absolute;
+bottom: 0;
+margin-bottom: 22px;
+}
 .show{
 
 
