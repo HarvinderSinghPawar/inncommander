@@ -21,124 +21,90 @@
     <script src="script1.js"></script>
 </head>
 
-<body>
-
-
+<body id="body-pd">
     <!--------------------------------------------   Sidebar     ---------------------------------------------------->
+    <div class="sidebar" id="mySidebar">
+        <nav>
+            <div>
+                <a href="#" class="nav__logo">
+                    <img src="Marketo assets/logo.png" class="img-fluid img-responsive" alt="SidebarLogo">
+                </a>
+                
+                <div class="float-right" id="openNav">  
+                    <img src="Marketo assets\Side panel Icons\icon\Arrow.png" onclick="openNav()" style="
+                    background-color: rgb(241, 238, 234);
+                    position: fixed; background-position: center; border-radius: 50px 0 0 50px; margin-left:-20px ;
+                    transform: scaleY(1); height: 55px; width: 55px;">
+                </div>
 
-    ​ <div id="mySidebar" class="sidebar">
-        <!-- Container for Sidebar -->
-        <!--Arrow Button-->
-        <div id="openhere">
-            <button class="btn openbtn float-right" onclick="openNav()"><img src="Marketo assets\Side panel Icons\icon\Arrow.png"
-                    style="height: 4rem; width: 4rem; background-color: transparent; position: fixed;">
-            </button>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        </div>
-        
-        <img src="Marketo assets/logo.png" class="img-fluid img-responsive" style="padding: 20px;" alt="SidebarLogo">
 
-        <div class="btn-group-vertical btn-block">
-            <!--Inside div in Sidebar Container-->
+                <div class="nav__list">
 
-            <div class="btn-group text-center">
-                <button type="button" class="btn btn-default text-white dropdown-toggle" data-toggle="dropdown"><img
-                        src="Marketo assets\Side panel Icons\icon\user.png"
-                        style="height: 20px; width: 20px; margin:-6px 10px 0px -90px;">
-                    <span style="font-size: 17px;">Overview</span>
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">111111</a>
-                    <a class="dropdown-item" href="#">222222</a>
+                    <a href="#" class="nav__link active">
+                        <img src="Marketo assets\Side panel Icons\icon\grid.png" class="nav__iconImg">
+                        <span class="nav__name">Overvier</span>
+                        <img class="nav__downArrow" src="Marketo assets\Side panel Icons\icon\chevron-down.png">
+                    </a>
+
+                    <a href="#" class="nav__link">
+                        <img src="Marketo assets\Side panel Icons\icon\user.png" class="nav__iconImg">
+                        <span class="nav__name">Employees</span>
+                        <img class="nav__downArrow" src="Marketo assets\Side panel Icons\icon\chevron-down.png">
+                    </a>
+
+                    <a href="#" class="nav__link">
+                        <img src="Marketo assets\Side panel Icons\icon\bar-chart.png" class="nav__iconImg">
+                        <span class="nav__name">Revenue</span>
+                        <img class="nav__downArrow" src="Marketo assets\Side panel Icons\icon\chevron-down.png">
+                    </a>
+
+                    <a href="#" class="nav__link">
+                        <img src="Marketo assets\Side panel Icons\icon\dollar-sign.png" class="nav__iconImg">
+                        <span class="nav__name">Expenses</span>
+                        <img class="nav__downArrow" src="Marketo assets\Side panel Icons\icon\chevron-down.png">
+                    </a>
+
+                    <a href="#" class="nav__link">
+                        <img src="Marketo assets\Side panel Icons\icon\clipboard.png" class="nav__iconImg">
+                        <span class="nav__name">Forecast</span>
+                        <img class="nav__downArrow" src="Marketo assets\Side panel Icons\icon\chevron-down.png">
+                    </a>
+
+                    <a href="#" class="nav__link">
+                        <img src="Marketo assets\Side panel Icons\icon\forecast.png" class="nav__iconImg">
+                        <span class="nav__name">Project</span>
+                        <img class="nav__downArrow" src="Marketo assets\Side panel Icons\icon\chevron-down.png">
+                    </a>
+
+
+                    <!-- Putting a Horizotal Line between the Buttons inside the Sidebar -->
+                    <hr>
+
+                    <a href="#" class="nav__link">
+                        <img src="Marketo assets\Side panel Icons\icon\home.png" class="nav__iconImg">
+                        <span class="nav__name">Property</span>
+                        <img class="nav__downArrow" src="Marketo assets\Side panel Icons\icon\chevron-down.png">
+                    </a>
+                    <a href="#" class="nav__link">
+                        <img src="Marketo assets\Side panel Icons\icon\check-circle.png" class="nav__iconImg">
+                        <span class="nav__name">Checklist</span>
+                        <img class="nav__downArrow" src="Marketo assets\Side panel Icons\icon\chevron-down.png">
+                    </a>
+                    <a href="#" class="nav__link">
+                        <img src="Marketo assets\Side panel Icons\icon\file-text.png" class="nav__iconImg">
+                        <span class="nav__name">Reports</span>
+                        <img class="nav__downArrow" src="Marketo assets\Side panel Icons\icon\chevron-down.png">
+                    </a>
                 </div>
             </div>
 
-            <div class="btn-group">
-                <button type="button" class="btn btn-default text-white dropdown-toggle" data-toggle="dropdown"><img
-                        src="Marketo assets\Side panel Icons\icon\user.png"
-                        style="height: 20px; width: 20px; margin:-6px 10px 0px -90px;">
-                    <span style="font-size: 17px; margin-right: 20px;"> Employees</span>
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">111111</a>
-                    <a class="dropdown-item" href="#">222222</a>
-                </div>
-            </div>
+            <a href="#" class="nav__link">
+                <img src="Marketo assets\Side panel Icons\icon\icon\settings.png" class="nav__iconImg">
+                <span class="nav__name">Settings</span>
+                <img class="nav__downArrow" src="Marketo assets\Side panel Icons\icon\chevron-down.png">
+            </a>
 
-            <div class="btn-group">
-                <button type="button" class="btn btn-default text-white dropdown-toggle" data-toggle="dropdown"><img
-                        src="Marketo assets\Side panel Icons\icon\bar-chart.png"
-                        style="height: 20px; width: 20px; margin:-6px 10px 0px -90px;">
-                    <span style="font-size: 17px; margin-right: 20px;"> Revenue</span>
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">111111</a>
-                    <a class="dropdown-item" href="#">222222</a>
-                </div>
-            </div>
-
-            <div class="btn-group">
-                <button type="button" class="btn btn-default text-white dropdown-toggle" data-toggle="dropdown"><img
-                        src="Marketo assets\Side panel Icons\icon\dollar-sign.png"
-                        style="height: 20px; width: 20px; margin:-6px 10px 0px -90px;">
-                    <span style="font-size: 17px; margin-right: 20px;"> Expenses</span>
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">111111</a>
-                    <a class="dropdown-item" href="#">222222</a>
-                </div>
-            </div>
-
-            <div class="btn-group">
-                <button type="button" class="btn btn-default text-white dropdown-toggle" data-toggle="dropdown"><img
-                        src="Marketo assets\Side panel Icons\icon\clipboard.png"
-                        style="height: 20px; width: 20px; margin:-6px 10px 0px -90px;">
-                    <span style="font-size: 17px; margin-right: 20px;"> Project</span>
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">111111</a>
-                    <a class="dropdown-item" href="#">222222</a>
-                </div>
-            </div>
-
-            <div class="btn-group">
-                <button type="button" class="btn btn-default text-white dropdown-toggle" data-toggle="dropdown"><img
-                        src="Marketo assets\Side panel Icons\icon\forecast.png"
-                        style="height: 20px; width: 20px; margin:-6px 10px 0px -90px;">
-                    <span style="font-size: 17px; margin-right: 20px;"> Forecast</span>
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">111111</a>
-                    <a class="dropdown-item" href="#">222222</a>
-                </div>
-            </div>
-
-
-
-            <hr style="width:50%;text-align:center;margin-left: auto">
-            <!-- Putting a Horizotal Line between the Buttons inside the Sidebar -->
-
-
-            <button type="button" class="btn btn-default text-white"><img
-                    src="Marketo assets\Side panel Icons\icon\home.png"
-                    style="height: 20px; width: 20px; margin:-6px 10px 0px -90px;"><span
-                    style="font-size: 17px; margin-right: 20px;"> Property</span></button>
-            <button type="button" class="btn btn-default text-white"><img
-                    src="Marketo assets\Side panel Icons\icon\check-circle.png"
-                    style="height: 20px; width: 20px; margin:-6px 10px 0px -90px;"><span
-                    style="font-size: 17px; margin-right: 20px;"> Checklist</span></button>
-            <button type="button" class="btn btn-default text-white"><img
-                    src="Marketo assets\Side panel Icons\icon\file-text.png"
-                    style="height: 20px; width: 20px; margin:-6px 10px 0px -90px;"><span
-                    style="font-size: 17px; margin-right: 20px;"> Reports</span></button>
-
-
-            <button type="button" class="btn btn-default text-white"
-                style="position: absolute; margin-bottom:0px; margin-top: 650px;"><img
-                    src="Marketo assets\Side panel Icons\icon\icon\settings.png"
-                    style="height: 20px; width: 20px; margin:-6px 10px 0px -90px;"><span
-                    style="font-size: 17px; margin-right: 20px;">Settings</span></button>
-        </div>
+        </nav>
     </div>
 
 
@@ -186,7 +152,8 @@
 
                 <!--Properties Header Buttons-->
                 <button type="button" class="btn active rounded" style="
-                 font-size: 10px; background-color: darkblue; color: white;">Properties</button>
+                 font-size: 10px; background-color: darkblue; color: white;"><a href="javascript:void(0)"
+                        class="closebtn" onclick="closeNav()">×++++</a>Properties</button>
                 <span class="btn-group">
                     <button class="btn btn-outline-dark dropdown-toggle rounded" type="button" style="font-size: 10px;"
                         data-toggle="dropdown">
@@ -211,10 +178,10 @@
             </div>
         </div>
         <div style="clear: both;"></div>
-        <!-------------------------------  Internal Panal of Main Window  ---------------------------------->
+        <!-------------------------------  Internal Panal in Main Panal  ---------------------------------->
 
-        <div class="container-fluid table-responsive-md h-100 w-75 shadow p-6 mb-10 bg-white rounded"
-            style="margin: 30px 80px 40px 40px; background-color:white;">
+        <div class="container-fluid table-responsive-md h-25 width-50 shadow p-6 mb-10 bg-white rounded"
+            style="margin-left: 20px; margin-top: 20px; background-color:white;">
             <!----Searbar---->
             <span class="search-container border border-secondary rounded m-5">
                 <form action="/action_page.php">
