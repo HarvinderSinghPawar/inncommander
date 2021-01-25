@@ -22,66 +22,54 @@
 </head>
 
 <body id="body-pd">
-    <!--------------------------------------------   Sidebar     ---------------------------------------------------->
+    <!--------------------------------------------   Sidebar    --------------------------------------------->
     <div class="sidebar" id="mySidebar">
         <nav>
             <div>
                 <a href="#" class="nav__logo">
                     <img src="Marketo assets/logo.png" class="img-fluid img-responsive" alt="SidebarLogo">
                 </a>
-                
-                <div class="float-right" id="openNav">  
+                <div class="float-right" id="openNav">
                     <img src="Marketo assets\Side panel Icons\icon\Arrow.png" onclick="openNav()" style="
                     background-color: rgb(241, 238, 234);
                     position: fixed; background-position: center; border-radius: 50px 0 0 50px; margin-left:-20px ;
                     transform: scaleY(1); height: 55px; width: 55px;">
                 </div>
-
-
-                <div class="nav__list"> 
-                    <a href="javascript:void(0)"
-                        class="closebtn" style="font-size: x-large; color: white; margin-left: 170px;"onclick="closeNav()">×</a>
-
+                <div class="nav__list">
+                  <!--  <a href="javascript:void(0)" class="closebtn"
+                        style="font-size: x-large; color: white; margin-left: 170px;" onclick="closeNav()">×</a> -->
                     <a href="#" class="nav__link active">
                         <img src="Marketo assets\Side panel Icons\icon\grid.png" class="nav__iconImg">
                         <span class="nav__name">Overvier</span>
                         <img class="nav__downArrow" src="Marketo assets\Side panel Icons\icon\chevron-down.png">
                     </a>
-
                     <a href="#" class="nav__link">
                         <img src="Marketo assets\Side panel Icons\icon\user.png" class="nav__iconImg">
                         <span class="nav__name">Employees</span>
                         <img class="nav__downArrow" src="Marketo assets\Side panel Icons\icon\chevron-down.png">
                     </a>
-
                     <a href="#" class="nav__link">
                         <img src="Marketo assets\Side panel Icons\icon\bar-chart.png" class="nav__iconImg">
                         <span class="nav__name">Revenue</span>
                         <img class="nav__downArrow" src="Marketo assets\Side panel Icons\icon\chevron-down.png">
                     </a>
-
                     <a href="#" class="nav__link">
                         <img src="Marketo assets\Side panel Icons\icon\dollar-sign.png" class="nav__iconImg">
                         <span class="nav__name">Expenses</span>
                         <img class="nav__downArrow" src="Marketo assets\Side panel Icons\icon\chevron-down.png">
                     </a>
-
                     <a href="#" class="nav__link">
                         <img src="Marketo assets\Side panel Icons\icon\clipboard.png" class="nav__iconImg">
                         <span class="nav__name">Forecast</span>
                         <img class="nav__downArrow" src="Marketo assets\Side panel Icons\icon\chevron-down.png">
                     </a>
-
                     <a href="#" class="nav__link">
                         <img src="Marketo assets\Side panel Icons\icon\forecast.png" class="nav__iconImg">
                         <span class="nav__name">Project</span>
                         <img class="nav__downArrow" src="Marketo assets\Side panel Icons\icon\chevron-down.png">
                     </a>
-
-
                     <!-- Putting a Horizotal Line between the Buttons inside the Sidebar -->
                     <hr>
-
                     <a href="#" class="nav__link">
                         <img src="Marketo assets\Side panel Icons\icon\home.png" class="nav__iconImg">
                         <span class="nav__name">Property</span>
@@ -101,15 +89,9 @@
                 <img src="Marketo assets\Side panel Icons\icon\icon\settings.png" class="nav__iconImg">
                 <span class="nav__name">Settings</span>
             </a>
-
         </nav>
     </div>
-
-
-
-
     <!---------------------------------------    Main Panal     ------------------------------------------>
-
     <!-- Main Container -->
     <div class="container-fluid " id="main">
         <div>
@@ -145,15 +127,13 @@
                 </span>
             </div>
             <div style="clear: both;"></div>
-            <!--Left Group Buttons in Header-->
-            <div class="btn-group container" style="width: 400px; margin-left: 50px;">
-                <!--Properties Header Buttons-->
-                <button type="button" class="btn active rounded" style="
-                 font-size: 10px; background-color: darkblue; color: white;">Properties</button>
-                <span class="btn-group">
-                    <button class="btn btn-outline-dark dropdown-toggle rounded" type="button" style="font-size: 10px;"
-                        data-toggle="dropdown">
+            <!--Group Buttons in Header-->
+            <div class="groupButtons">
+                <button type="button" id="groupButton1">Properties</button>
+                <span>
+                    <button class="btn-outline-secondary" type="button" id="groupButton2" data-toggle="dropdown">
                         Selected two properties
+                        <img id="blackArrow" src="Marketo assets\Side panel Icons\icon\chevron-down - black.png">
                     </button>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Select 1</a>
@@ -162,23 +142,19 @@
                         <a class="dropdown-item" href="#">Select 4</a>
                     </div>
                 </span>
-                <span class="ml-mr-auto">
-                    <button type="button" class="btn-lg btn-close" data-dismiss="modal" style="background-color:#d3d3d3"
-                        ; aria-label="Close">Select
-                        1<span aria-hidden="true">&times;</span></button>
-                    <button type="button" class="btn-lg btn-close" data-dismiss="modal" style="background-color:#d3d3d3"
-                        ; aria-label="Close">Select
-                        4<span aria-hidden="true">&times;</span></button>
+                <span class="selection1 d-grid gap-2">
+                    <button class="btn btn-outline-secondary btn-lg" type="button">Select 1</button>
                 </span>
-
+                <span class="selection1 d-grid gap-2">
+                    <button class="btn btn-outline-secondary btn-lg" type="button">Select 4</button>
+                </span>
             </div>
         </div>
         <div style="clear: both;"></div>
         <!-------------------------------  Internal Panal in Main Panal  ---------------------------------->
-
         <div class="container-fluid table-responsive-md h-25 width-50 shadow p-6 mb-10 bg-white rounded"
             style="margin-left: 20px; margin-top: 20px; background-color:white;">
-            <!----Searbar---->
+            <!----Searchbar---->
             <span class="search-container border border-secondary rounded m-5">
                 <form action="/action_page.php">
                     <input type="text" placeholder="Search.." name="search">
@@ -187,7 +163,6 @@
                             style="height: 2rem; width: 2rem;" alt="Search Button"></button>
                 </form>
             </span>
-
             <!--- Table top right corner button -->
             <span class="float-right m-5">
                 <button type="button" class="btn btn-default btn-lg m-1"
@@ -197,8 +172,6 @@
                     style="background-color: darkblue;color: white;">+Add
                     New</button>
             </span>
-
-
             <!----- Adding Table Here------>
             <table class="table table-hover">
                 <thead>
@@ -545,10 +518,6 @@
                     </tr>
                 </tbody>
             </table>
-
-
-
-
             <!--Pagination bottom left Corner-->
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
